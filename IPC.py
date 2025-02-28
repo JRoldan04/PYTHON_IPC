@@ -51,10 +51,8 @@ time.sleep(12)
 
 acciones = ActionChains(driver)
 
-# Moverse a una posición (100px a la derecha, 200px abajo) y hacer clic derecho
+# Moverse a una posición 
 acciones.move_by_offset(50, 400).context_click().perform()
-
-# Esperar unos segundos para ver el resultado (solo para pruebas)
 time.sleep(2)
 
 acciones.send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ENTER).perform()
