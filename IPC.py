@@ -19,21 +19,21 @@ boton_lista = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.ID, "accordion-header-0"))
 )
 boton_lista.click()
-time.sleep(5)
+#time.sleep(5)
 
 #CLICK EN INDICE DE PRECIOS AL CONSUMIDOR (IPC)
 icono = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, '//*[@id="accordion-body-0"]/div/div[2]/mat-tree/mat-nested-tree-node[2]/div[1]/a/mat-icon'))
 )
 icono.click()
-time.sleep(5)
+#time.sleep(5)
 
 #CLICK EN BASE 2018
 icono = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, '//*[@id="accordion-body-0"]/div/div[2]/mat-tree/mat-nested-tree-node[2]/div[2]/mat-nested-tree-node[1]/div[1]/a/mat-icon'))
 )
 icono.click()
-time.sleep(5)
+#time.sleep(5)
 
 
 enlace = driver.find_element(By.XPATH,'//*[@id="accordion-body-0"]/div/div[2]/mat-tree/mat-nested-tree-node[2]/div[2]/mat-nested-tree-node[1]/div[2]/mat-tree-node[2]/a')
@@ -46,7 +46,7 @@ WebDriverWait(driver, 10).until(EC.new_window_is_opened)
 driver.switch_to.window(driver.window_handles[1])
 
 print("Nueva URL:", driver.current_url)
-time.sleep(15)
+time.sleep(12)
 
 
 acciones = ActionChains(driver)
@@ -55,10 +55,10 @@ acciones = ActionChains(driver)
 acciones.move_by_offset(50, 400).context_click().perform()
 
 # Esperar unos segundos para ver el resultado (solo para pruebas)
-time.sleep(6)
+time.sleep(2)
 
 acciones.send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ENTER).perform()
-time.sleep(6)
+time.sleep(2)
 
 acciones.send_keys(Keys.ENTER).perform()
 time.sleep(2)
@@ -70,12 +70,12 @@ desplegable.click()
 time.sleep(4)
 
 acciones.send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ARROW_DOWN).send_keys(Keys.ENTER).perform()
-time.sleep(2)
+#time.sleep(2)
 
 icono = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, '//*[@id="bi_share_context_dialog-okbutton"]/button'))
 )
 icono.click()
-time.sleep(20)
+time.sleep(12)
 
 
